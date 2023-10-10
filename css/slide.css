@@ -1,0 +1,59 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the content */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Full-width carousel */
+.carousel {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual slide */
+.slide {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Hide all slides initially */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1; /* Show the active slide */
+}
+
+.carousel-image {
+    width: 100%; /* Make the image width 100% */
+    height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+    max-width: 100%; /* Ensure the image does not exceed the screen width */
+}
+
+/* "Saiba mais" button */
+.carousel-button {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
